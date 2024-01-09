@@ -15,6 +15,8 @@
 
   <!-- Feather Icons -->
   <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
 
   <!-- My Style -->
   <link rel="stylesheet" href="css/style.css">
@@ -30,7 +32,7 @@
       <a href="#home"><i class="fa-solid fa-store fa-xl" style="color: #ffffff;"></i>Home</a>
       <a href="#about"><i class="fa-solid fa-person-chalkboard fa-xl" style="color: #ffffff;"></i>Tentang Kami</a>
       <a href="#menu"><i class="fa-solid fa-mug-hot fa-xl" style='color: #ffffff;'></i>Menu</a>
-      <a href="#products"><i class="fa-brands fa-product-hunt fa-xl" style="color: #ffffff;"></i>Produk</a>
+      <a href="#produk"><i class="fa-brands fa-product-hunt fa-xl" style="color: #ffffff;"></i>Produk</a>
       <a href="#contact"><i class="fa-regular fa-address-card fa-xl" style="color: #ffffff;"></i>Kontak</a>
     </div>
 
@@ -124,21 +126,22 @@
   <!-- Menu Section end -->
 
   <!-- Products Section start -->
-  <section class="products" id="products">
+  <section class="produk" id="produk">
     <h2><span>Produk Unggulan</span> Kami</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde eum, ab fuga possimus iste.</p>
 
     <div class="row">
-      <div class="product-card">
-        <div class="product-icons">
-          <a href="#"><i data-feather="shopping-cart"></i></a>
+      <template x-for="(item, index) in items" x-key="index">
+        <div class="produk-card">
+        <div class="produk-icons">
+          <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i></a>
           <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
         </div>
-        <div class="product-image">
-          <img src="img/products/1.jpg" alt="Product 1">
+        <div class="produk-image">
+          <img :src='`img/${item.img}`' :alt='item.name'>
         </div>
-        <div class="product-content">
-          <h3>Coffee Beans 1</h3>
+        <div class="produk-content">
+          <h3 x-text='item.name'></h3>
           <div class="product-stars">
             <i data-feather="star" class="star-full"></i>
             <i data-feather="star" class="star-full"></i>
@@ -146,50 +149,11 @@
             <i data-feather="star" class="star-full"></i>
             <i data-feather="star"></i>
           </div>
-          <div class="product-price">IDR 30K <span>IDR 55K</span></div>
+          <div class="produk-price">IDR 30K <span>IDR 55K</span></div>
         </div>
-      </div>
-      <div class="product-card">
-        <div class="product-icons">
-          <a href="#"><i data-feather="shopping-cart"></i></a>
-          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+
         </div>
-        <div class="product-image">
-          <img src="img/products/1.jpg" alt="Product 1">
-        </div>
-        <div class="product-content">
-          <h3>Coffee Beans 1</h3>
-          <div class="product-stars">
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-          </div>
-          <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-icons">
-          <a href="#"><i data-feather="shopping-cart"></i></a>
-          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-        </div>
-        <div class="product-image">
-          <img src="img/products/1.jpg" alt="Product 1">
-        </div>
-        <div class="product-content">
-          <h3>Coffee Beans 1</h3>
-          <div class="product-stars">
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-          </div>
-          <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-        </div>
-      </div>
-    </div>
+      </template>
   </section>
   <!-- Products Section end -->
 
@@ -277,6 +241,7 @@
   <script src="https://kit.fontawesome.com/4fd0c502c7.js" crossorigin="anonymous"></script>
   <!-- My Javascript -->
   <script src="js/script.js"></script>
+  <script src='js/app.js'></script>
 </body>
 
 </html>

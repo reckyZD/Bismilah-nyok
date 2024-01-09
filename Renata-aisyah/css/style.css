@@ -252,14 +252,14 @@ body {
 /* About Section */
 .about,
 .menu,
-.products,
+.produk,
 .contact {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
-.products h2,
+.produk h2,
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -268,7 +268,7 @@ body {
 
 .about h2 span,
 .menu h2 span,
-.products h2 span,
+.produk h2 span,
 .contact h2 span {
   color: var(--primary);
 }
@@ -305,12 +305,12 @@ body {
 
 /* Menu Section */
 .menu h2,
-.products h2,
+.produk h2,
 .contact h2 {
   margin-bottom: 1rem;
 }
 .menu p,
-.products p,
+.produk p,
 .contact p {
   text-align: center;
   max-width: 30rem;
@@ -385,26 +385,26 @@ body {
 }
 
 /* Products Section */
-.products .row {
+.produk .row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem;
   margin-top: 4rem;
 }
 
-.products .product-card {
+.produk .produk-card {
   text-align: center;
   border: 1px solid #666;
   padding: 2rem;
 }
 
-.products .product-icons {
+.produk .produk-icons {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
 }
 
-.products .product-icons a {
+.produk .produk-icons a {
   width: 4rem;
   height: 4rem;
   color: #fff;
@@ -416,39 +416,39 @@ body {
   align-items: center;
 }
 
-.products .product-icons a:hover {
+.produk .produk-icons a:hover {
   background-color: var(--primary);
   border: 1px solid var(--primary);
 }
 
-.products .product-image {
+.produk .produk-image {
   padding: 1rem 0;
 }
 
-.products .product-image img {
+.produk .produk-image img {
   height: 25rem;
 }
 
-.products .product-content h3 {
+.produk .produk-content h3 {
   font-size: 2rem;
 }
 
-.products .product-stars {
+.produk .produk-stars {
   font-size: 1.7rem;
   padding: 0.8rem;
   color: var(--primary);
 }
 
-.products .product-stars .star-full {
+.products .produk-stars .star-full {
   fill: var(--primary);
 }
 
-.products .product-price {
+.produk .produk-price {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.products .product-price span {
+.produk .produk-price span {
   text-decoration: line-through;
   font-weight: lighter;
   font-size: 1rem;
