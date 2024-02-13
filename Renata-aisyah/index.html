@@ -99,7 +99,7 @@
 
     <div class="row">
       <div class="about-img">
-        <img src="img/products/13.jpg" alt="Tentang Kami">
+        <img src="img/14.jpg" alt="Tentang Kami">
       </div>
       <div class="content">
         <h3>Kenapa memilih berbelanja di kami?</h3>
@@ -112,22 +112,24 @@
   <!-- About Section end -->
 
   <!-- Menu Section start -->
-  <section id="menu" class="menu">
+  <section id="menu" class="menu" x-data='menu'>
     <h2><span>Menu</span> Kami</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, rerum!</p>
 
     <div class="row">
-      <div class="menu-card">
-        <img :src="`img/menu/${item.img}`" :alt="item.name" class="menu-card-img">
-        <h3 class="menu-card-title">- Cetak foto kolase -</h3>
-        <p class="menu-card-price">IDR 35K</p>
-      </div>
+      <template x-for='(item, index) in items' x-key='index'>
+        <div class="menu-card">
+          <img :src="`img/${item.img}`" :alt="item.name" class="menu-card-img">
+          <h3 class="menu-card-title" x-text='item.name'></h3>
+          <p class="menu-card-price" x-text='rupiah(item.price)'></p>
+        </div>
+      </template>
     </div>
   </section>
   <!-- Menu Section end -->
 
   <!-- Products Section start -->
-  <section class="produk" id="produk" x-data>
+  <section class="produk" id="produk" x-data='produk'>
     <h2><span>Produk Unggulan</span> Kami</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde eum, ab fuga possimus iste.</p>
 
@@ -165,9 +167,7 @@
     </p>
 
     <div class="row">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.947186621419!2d107.05470737366187!3d-6.4008068625999295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69975b9ece3911%3A0xc01462063c0ac623!2sABILA%20CELL!5e0!3m2!1sid!2sid!4v1702401476635!5m2!1sid!2sid" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class='maps'></iframe>
 
       <form action="">
         <div class="input-group">

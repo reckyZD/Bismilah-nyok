@@ -313,17 +313,19 @@ body {
 .produk p,
 .contact p {
   text-align: center;
-  max-width: 30rem;
+  max-width: 50rem;
   margin: auto;
-  font-weight: 100;
-  line-height: 1.6;
+  font-weight: bold;
+  line-height: 2;
 }
 
 .menu .row {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5rem;
-  justify-content: center;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  justify-content: space-around;
 }
 
 .menu .row .menu-card {
@@ -334,7 +336,8 @@ body {
 .menu .row .menu-card img {
   border-radius: 1.5rem 1rem;
   box-shadow: 6px 6px 6px rgba(255, 255, 255, .5);
-  width: 100%;
+  width: 15rem;
+  height: 15rem;
 }
 
 /* animasi card */
